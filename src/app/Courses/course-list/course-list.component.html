@@ -1,0 +1,23 @@
+
+  <section class="courses">
+    <table>
+        <thead>
+            <tr>
+                <td>courseName</td>
+                <td >courseDescription</td>
+                <td>startDate</td>
+                <td>endDate</td>
+                <td>courseFee</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let course of courses">
+                <td>{{ course.courseName }}</td>
+                <td>{{ course.courseDescription}}</td>
+                <td>{{ course.startDate}}</td>
+                <td>{{ course.endDate}}</td>
+                <td>{{ course.courseFee }}</td>
+            </tr>
+        </tbody>
+    </table>
+  </section>

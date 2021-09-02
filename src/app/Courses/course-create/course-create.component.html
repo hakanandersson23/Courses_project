@@ -1,0 +1,64 @@
+<h1>Enter the course credentials to register a new course</h1>
+<form (submit)="saveCourse(courseForm)" #courseForm="ngForm">
+  <mat-card>
+    <mat-form-field>
+      <input matInput
+      required
+      type="text"
+      name="courseName"
+      ngModel
+      placeholder="Course Name"
+      #name="ngModel">
+      <mat-error *ngIf="name.invalid">Please enter the name of the course.</mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput
+      required
+      type="text"
+      name="courseDescription"
+       ngModel
+       placeholder="Course Description"
+       #description="ngModel">
+       <mat-error *ngIf="description.invalid">Please enter a course description.</mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput
+      required
+      type="text"
+      name="startDate"
+       ngModel
+       placeholder="Start date"
+       #startDate="ngModel">
+       <mat-error *ngIf="startDate.invalid">Please enter a startdate.</mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput
+      required
+      type="text"
+      name="endDate"
+      placeholder="End date"
+       ngModel
+       #endDate="ngModel">
+       <mat-error *ngIf="endDate.invalid">Please enter a end date.</mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput
+      required
+      type="text"
+      name="courseFee"
+      placeholder="Course fee"
+       ngModel
+       #courseFee="ngModel">
+       <mat-error *ngIf="courseFee.invalid">Please enter a course description.</mat-error>
+    </mat-form-field>
+
+    <button mat-raised-button
+    color="primary"
+    type="submit">Save Course</button>
+  </mat-card>
+</form>
+
